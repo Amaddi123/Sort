@@ -164,6 +164,34 @@ public class Sorts{
             steps+=2;
         }
     }
+    
+    public boolean seqSearch (ArrayList <Integer> list, int num){
+        for(int i=0;  i<list.size(); i++){
+            if(list.get(i) == num){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean binSearch(ArrayList <Integer> list, int num, int first, int last){
+        if(last>=first){
+         return false;   
+        }
+        else{
+           int mid = (first+last)/2;
+           if(mid == num){
+             return true;  
+            }
+           if(num< list.get(mid)){
+             return binSearch(list, num, first, mid-1);
+            }
+           if(num> list.get(mid)){
+             return binSearch(list, num, mid+1, last);
+            }
+        }     
+        return false;
+    }
     /**
      *  Accessor method to return the current value of steps
      *
