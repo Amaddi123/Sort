@@ -40,11 +40,12 @@ public class SortStep{
       System.out.println("(4) Recursive mergesort");
       System.out.println("(5) Fill with Integers");
       System.out.println("(6) Binary Search");
+      System.out.println("(7) Sequential Search");
       System.out.println("(Q) Quit");
       System.out.println();
       System.out.print("Choice ---> ");
       choice = console.next() + " ";
-      if ('1' <= choice.charAt(0) && choice.charAt(0) <= '6'){
+      if ('1' <= choice.charAt(0) && choice.charAt(0) <= '7'){
         System.out.println();
 
         mySorts.setStepCount(0);
@@ -71,16 +72,19 @@ public class SortStep{
               listType  = "Integer";
               break;         
             case '6':
-              //resetArray();
+              resetArray();
+              mySorts.mergeSort(myArray, 0, myArray.size()-1);
+              System.out.print("SORTED ");
+              screenOutput();
               System.out.print("What do you want to search for? ");
               int num = console.nextInt();
               System.out.print(mySorts.binSearch(myArray, num, 0, myArray.size() - 1));
               break;      
              case '7':
-              //resetArray();
+              resetArray();
               System.out.print("What do you want to search for? ");
-              int num = console.nextInt();
-              System.out.print(mySorts.seqSearch(myArray, num));
+              int numb = console.nextInt();
+              System.out.print(mySorts.seqSearch(myArray, numb));
               break;   
         }
 

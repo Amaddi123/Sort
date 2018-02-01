@@ -115,7 +115,7 @@ public class Sorts{
             // Get the index of the element which is in the middle
             int middle = low + (high - low) / 2;
             //System.out.
-            System.out.println("low " + low + "middle " + middle + " high " + high);
+            //System.out.println("low " + low + "middle " + middle + " high " + high);
             // Sort the left side of the array
             mergeSort(list, low, middle);
             // Sort the right side of the array
@@ -165,9 +165,9 @@ public class Sorts{
         }
     }
     
-    public boolean seqSearch (ArrayList <Integer> list, int num){
+    public boolean seqSearch (ArrayList <Integer> list, int numb){
         for(int i=0;  i<list.size(); i++){
-            if(list.get(i) == num){
+            if(list.get(i) == numb){
                 return true;
             }
         }
