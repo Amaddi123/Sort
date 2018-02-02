@@ -175,12 +175,12 @@ public class Sorts{
     }
     
     public boolean binSearch(ArrayList <Integer> list, int num, int first, int last){
-        if(last>=first){
+        if(last<first){
          return false;   
         }
         else{
            int mid = (first+last)/2;
-           if(mid == num){
+           if(list.get(mid) == num){
              return true;  
             }
            if(num< list.get(mid)){
